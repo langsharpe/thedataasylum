@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://langsharpe.github.com/thedataasylum/atom.xml" rel="self"/>
-  <link href="http://langsharpe.github.com/thedataasylum/"/>
-  <updated>2012-04-19T18:49:03+10:00</updated>
-  <id>http://langsharpe.github.com/thedataasylum/</id>
+  <title><![CDATA[The Data Asylum]]></title>
+  <link href="http://thedataasylum.com/atom.xml" rel="self"/>
+  <link href="http://thedataasylum.com/"/>
+  <updated>2012-04-19T19:15:03+10:00</updated>
+  <id>http://thedataasylum.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Lang Sharpe]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
