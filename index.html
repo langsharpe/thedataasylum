@@ -9,7 +9,7 @@
   <meta name="author" content="Lang Sharpe">
 
   
-  <meta name="description" content=" Blog Archives Recent Posts ">
+  <meta name="description" content="Yes you can have reasonably good text-shadows. But only on a solid color background. Yes you can fadeIn and fadeOut text. But only on a solid color &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,7 +65,1104 @@
       <div class="blog-index">
   
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/what-i-learned-about-ie7-text-shadow-and-opacity.html">What I Learned About IE7 Text-shadows and Opacity</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-05T00:00:00+10:00" pubdate data-updated="true">Oct 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li>Yes you can have reasonably good text-shadows.
+
+<ul>
+<li>But only on a <a href="http://www.useragentman.com/blog/2011/04/14/css3-text-shadow-can-it-be-done-in-ie-without-javascript/">solid color background</a>.</li>
+</ul>
+</li>
+<li>Yes you can fadeIn and fadeOut text.
+
+<ul>
+<li>But only on a <a href="http://stackoverflow.com/questions/3247333/jquery-fadein-text-in-ie7-ie8-text-aliased-during-animation">solid color background</a>.</li>
+</ul>
+</li>
+<li>Yes you can even fadeIn and fadeOut transparent PNGS.
+
+<ul>
+<li>But only once you&#8217;ve applied a <a href="http://www.sitepoint.com/forums/showthread.php?590295-jQuery-fadein-fadeout-of-transparent-png-in-IE7-and-Chrome&amp;s=76c69f65b9eeab5322be704d23c92795&amp;p=4722567&amp;viewfull=1#post4722567">transparent background</a>. Even then it looks a bit awful.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/css-margin-and-padding-shorthand.html">Css Margin and Padding Shorthand</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-01T00:00:00+10:00" pubdate data-updated="true">Oct 1<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Css provides short hand properties for margin and padding which let you define multiple properties at once. For example:-</p>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">p</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c">/* Shorthand */</span>
+</span><span class='line'>  <span class="k">margin</span><span class="o">:</span> <span class="m">20px</span> <span class="m">5px</span> <span class="m">5px</span> <span class="m">10px</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c">/* The Long Equivalent */</span>
+</span><span class='line'>  <span class="k">margin-top</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">margin-right</span><span class="o">:</span> <span class="m">5px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">margin-bottom</span><span class="o">:</span> <span class="m">5px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">margin-left</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img class="right" src="/images/posts/MarginAndPaddingShorthand.png" title="Diagram of clockwise box" ></p>
+
+<p>There are four variations of the shorthand property. You can specify 1, 2, 3 or 4 values, which are applied to the top, bottom, left and right margins. The problem that I had was trying to determine which value is applied to which side, especially if there are 2 or 3 values. There is an easy way to remember however.</p>
+
+
+<p>
+<strong>Start at the top and go clockwise. If you run out of values, use the value already set for that axis.</strong>
+</p>
+
+
+<p>
+So for example&#8230;
+</p>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">p</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">margin</span><span class="o">:</span> <span class="m">20px</span>   <span class="m">5px</span>      <span class="m">5px</span>       <span class="m">10px</span><span class="p">;</span>
+</span><span class='line'>  <span class="c">/*      top -&gt; right -&gt; bottom -&gt; left    */</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">margin</span><span class="o">:</span> <span class="m">20px</span>   <span class="m">5px</span>      <span class="m">5px</span><span class="p">;</span>
+</span><span class='line'>  <span class="c">/*      top -&gt; right -&gt; bottom</span>
+</span><span class='line'><span class="c">                 left                       */</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">margin</span><span class="o">:</span> <span class="m">20px</span>   <span class="m">5px</span><span class="p">;</span>
+</span><span class='line'>  <span class="c">/*      top -&gt; right</span>
+</span><span class='line'><span class="c">          bottom left                       */</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c">/* the expection is for a single value. This applies to all sides. */</span>
+</span><span class='line'>  <span class="k">margin</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
+</span><span class='line'>  <span class="c">/*      all (top, right, bottom and left) */</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/how-rails-nginx-x-accel-redirect-work-together.html">How Rails, Nginx and X-Accel-Redirect Work Together</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-05T00:00:00+10:00" pubdate data-updated="true">Jul 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>TL;DR</strong> - To use X-Accel-Redirect to serve static files from e.g /mnt/filestorage using send_file, put this in your nginx server configuration.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>proxy_set_header  X-Accel-Mapping       /mnt/filestorage/=/private_files/;
+</span><span class='line'>
+</span><span class='line'>location /private_files/ {
+</span><span class='line'>  internal;
+</span><span class='line'>  alias   /mnt/filestorage/;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The need for X-Accel-Redirect (and it&#8217;s sibling X-Sendfile) comes from two distinct requirements</p>
+
+<ul>
+<li>The need to deliver large files.</li>
+<li>The need for those files to not be available to the public.</li>
+</ul>
+
+
+<p>Here we are going to see how to set up X-Accel-Redirect and Rails. This is a bit complex so I&#8217;m going to run through a specific example of downloading a file. Along the way we&#8217;ll see the configuration, code and HTTP headers that are used. This assumes you already have Rails and Nginx installed and working.</p>
+
+<p>1. Browser makes a request for a file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># HTTP Headers
+</span><span class='line'>GET /download/SecretSquirrel.zip HTTP/1.1</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2. Nginx receives this request. It adds on a header with configuration data that will be required by rails.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#Nginx configuration
+</span><span class='line'>proxy_set_header   X-Accel-Mapping       /mnt/filestorage/=/private_files/;
+</span><span class='line'>
+</span><span class='line'># Example HTTP Headers with additional header added by nginx
+</span><span class='line'>GET /download/SecretSquirrel.zip HTTP/1.1
+</span><span class='line'>X-Accel-Mapping: /mnt/filestorage/=/private_files/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>3. Nginx passes the request onto Rails and it invokes the relevant controller.</p>
+
+<p>4. The controller makes its authorization checks and calls send_file. Use the absolute path to the file.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># controller code (e.g. app/controllers/downloads_controller.rb)
+</span><span class='line'>send_file('/mnt/filestorage/SecretSquirrel.zip')</span></code></pre></td></tr></table></div></figure>
+
+
+<p>5. Rails (<a href="http://rack.rubyforge.org/">Rack</a> to be precise) then decides what to with the file. We need to tell rails to use X-Accel-Redirect in its configuration as shown below. Instead of using the file as the body of the request, it will add a header to the response. It uses the X-Accel-Mapping that nginx added earlier to change the file path.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Rails configuration (e.g. config/environments/production.rb)
+</span><span class='line'>config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
+</span><span class='line'>
+</span><span class='line'># HTTP Response
+</span><span class='line'>HTTP/1.1 200 OK
+</span><span class='line'>X-Accel-Redirect: /private_files/SecretSquirrel.zip
+</span><span class='line'>Content-Type: application/octet-stream
+</span><span class='line'>Content-length: ...
+</span><span class='line'>Content-Disposition: attachment; filename="SecretSquirrel.zip"
+</span><span class='line'>&lt;empty body&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>6. Nginx receives this header from rails and interprets it. It finds the location directive and reverses the changes to the path that rails made in step 5.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#Nginx configuration
+</span><span class='line'>    location /private_files/ {
+</span><span class='line'>    internal;
+</span><span class='line'>        alias   /mnt/filestorage/;
+</span><span class='line'>    }
+</span><span class='line'>
+</span><span class='line'># HTTP Response
+</span><span class='line'>HTTP/1.1 200 OK
+</span><span class='line'>Content-Type: application/octet-stream
+</span><span class='line'>Content-Length: ...
+</span><span class='line'>Content-Disposition: attachment; filename="SecretSquirrel.zip"
+</span><span class='line'>&lt;contents of /mnt/filestorage/SecretSquirrel.zip&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>7. Browser receives the file as if it was a normal download.</p>
+
+<p>Also, if you have compiled passenger into nginx, remember to <a href="/articles/adding-headers-to-requests-using-nginx-and-passenger.html">use passenger_set_cgi_param instead of proxy_set_header</a></p>
+
+<p><em>Software Versions used</em></p>
+
+<ul>
+<li>Rails 3.0.7</li>
+<li>Passenger 3.0.5</li>
+<li>Nginx 0.8.54</li>
+<li>on Ubuntu 10.04.2 LTS</li>
+</ul>
+
+
+<p><em>Resources</em></p>
+
+<ul>
+<li><a href="http://rack.rubyforge.org/doc/Rack/Sendfile.html">Rack::Sendfile documentation</a></li>
+<li><a href="http://wiki.nginx.org/X-accel">Nginx X-Accel documemtation</a></li>
+<li><a href="http://wiki.nginx.org/XSendfile">More documentation on Nginx&#8217;s X-Accel-Redirect</a></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/adding-headers-to-requests-using-nginx-and-passenger.html">Adding Headers to Requests Using Nginx and Passenger</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-13T00:00:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>TL;DR</strong> If you have compiled Passenger into Nginx, use <code>passenger_set_cgi_param</code> instead of <code>proxy_set_header</code> to set HTTP headers required by the rails process.</p>
+
+<p>There are two ways of using Passenger and Nginx together. The first is when the two are compiled into one daemon that creates many processes as required. The second is using Nginx as a proxy in front of Passenger/Apache/Nginx processes running either on the same machine or on a different server altogether.</p>
+
+<p>When using Nginx as a proxy, it can be configured to add or redefine http headers in the request. This is done using the <code>proxy_set_header</code> directive.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>proxy_set_header X-Forwarded-For 127.0.0.1;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you have compiled Passenger into Nginx, the above configuration will have no effect. This is because the request is not considered to be proxied by Nginx. To have the same effect you need to use the <code>passenger_set_cgi_param</code> directive.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>passenger_set_cgi_param HTTP_X_FORWARDED_FOR 127.0.0.1;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Notice that the header name is all upper case, and has <code>HTTP_</code> prefixed.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/differences-between-php-arrays-and-ruby-hashes.html">Differences Between PHP Arrays and Ruby Hashes</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-19T00:00:00+10:00" pubdate data-updated="true">Mar 19<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We&#39;ve looked at the <a href="/articles/major-differences-between-php-and-ruby-arrays.html">differences between Ruby and PHP arrays</a> before. Now lets compare PHP arrays and Ruby hashes. They should be similar as all <a href="http://stackoverflow.com/questions/247467/how-are-associative-arrays-implemented-in-php" target="_blank">PHP arrays are implemented as hashes</a>. There is however a crucial difference that can trip you up if you are switching from one language to another.</p>
+
+
+<h3>Referencing an index that hasn&#39;t been set is an error in PHP, but not in Ruby.</h3>
+
+<p>In PHP, retrieving a value for an index that you haven&#39;t used is a warning. Although warnings can be turned off it is best practice to develop with them turned on.</p>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="cp">&lt;?php</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$a</span><span class="p">[</span><span class="s1">&#39;key1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;value1&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$a</span><span class="p">[</span><span class="s1">&#39;key2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;value2&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">print</span> <span class="nv">$a</span><span class="p">[</span><span class="s1">&#39;key5&#39;</span><span class="p">];</span>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">lang@virtualbox1:~/$ php hash.php</span>
+</span><span class='line'><span class="cm">PHP Notice: Undefined index: key5 in /home/lang/hash.php on line 6</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'><span class="cp">?&gt;</span><span class="x"></span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>In Ruby you can set a default value for all keys that have not set a value. By default this value is nil.</p>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="s1">&#39;key1&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;value1&#39;</span>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="s1">&#39;key2&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;value2&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">puts</span> <span class="n">a</span><span class="o">[</span><span class="s1">&#39;key5&#39;</span><span class="o">]</span>
+</span><span class='line'><span class="cm">=begin</span>
+</span><span class='line'><span class="cm">lang@virtualbox1:~/$ ruby hash.rb</span>
+</span><span class='line'><span class="cm">nil</span>
+</span><span class='line'><span class="cm">=end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Ruby hashes are unordered (up to version 1.8). PHP arrays have an internal order seperate from their index.</h3>
+
+<p>When you loop through a PHP array, the values will be returned in the order they were added.</p>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="cp">&lt;?php</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$a</span><span class="p">[</span><span class="s1">&#39;key1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;one&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$a</span><span class="p">[</span><span class="s1">&#39;key0&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;zero&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">foreach</span><span class="p">(</span><span class="nv">$a</span> <span class="k">as</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">print</span> <span class="nv">$value</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">lang@virtualbox1:~/$ php hash.php</span>
+</span><span class='line'><span class="cm">one</span>
+</span><span class='line'><span class="cm">zero</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'><span class="cp">?&gt;</span><span class="x"></span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>In Ruby 1.8 hashes are unordered, they could be retreived in any order that ruby decides is best. Ruby 1.9 changes this so that it works in the same way as the PHP example above.</p>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="s1">&#39;key1&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;one&#39;</span>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="s1">&#39;key0&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;zero&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">each_value</span> <span class="k">do</span> <span class="o">|</span><span class="n">value</span><span class="o">|</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="n">value</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="cm">=begin</span>
+</span><span class='line'><span class="cm">lang@virtualbox1:~/$ ruby hash.rb</span>
+</span><span class='line'><span class="cm">zero</span>
+</span><span class='line'><span class="cm">one</span>
+</span><span class='line'><span class="cm">=end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Is there anything that has been missed? Add a comment below.</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/major-differences-between-php-and-ruby-arrays.html">Major Differences Between PHP and Ruby Arrays</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-10T00:00:00+10:00" pubdate data-updated="true">Mar 10<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>PHP has a single array type, where as Ruby has Array and Hash, which covers the same functionality. In this article i&#39;ll go though the three major logical differences between PHPs array type and Rubys Array class. <a href="http://thedataasylum.com/article_225/differences-php-arrays-ruby-hashes.html">We compare PHP arrays and Ruby Hashes in separate post</a>.</p>
+
+
+<p>Firstly,</p>
+
+
+<h3>PHP arrays have an internal order separate from their index.</h3>
+
+<p>Lets look at a simple example. In php the order you insert values into an array determines the order that php will return them using foreach.</p>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="cp">&lt;?php</span>
+</span><span class='line'><span class="nv">$a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;one&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;zero&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">foreach</span><span class="p">(</span><span class="nv">$a</span> <span class="k">as</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">print</span> <span class="nv">$value</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">lang@virtualbox1:~/arrays$ php array.php</span>
+</span><span class='line'><span class="cm">one</span>
+</span><span class='line'><span class="cm">zero</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'><span class="o">&gt;?</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Ruby on the other hand uses the key or index of the array to determine the order, regardless of order in which the values are inserted.</p>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;one&#39;</span>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;zero&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">value</span><span class="o">|</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="n">value</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="cm">=begin</span>
+</span><span class='line'><span class="cm">lang@virtualbox1:~/arrays$ ruby array.rb</span>
+</span><span class='line'><span class="cm">zero</span>
+</span><span class='line'><span class="cm">one</span>
+</span><span class='line'><span class="cm">=end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Secondly,</p>
+
+<h3>Ruby arrays always start at 0 and end at the highest index. PHP arrays only contain the keys that have been entered.</h3>
+
+<p>In the example below, PHP will output the two array values that are set.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="cp">&lt;?php</span>
+</span><span class='line'><span class="nv">$a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;two&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$a</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;four&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">foreach</span><span class="p">(</span><span class="nv">$a</span> <span class="k">as</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">print</span> <span class="nv">$value</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">lang@virtualbox1:~/arrays$ php array.php</span>
+</span><span class='line'><span class="cm">two</span>
+</span><span class='line'><span class="cm">four</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'><span class="cp">?&gt;</span><span class="x"></span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>In the ruby example, not only are the two values output, but an attempt is made to get the value from every index between 0 and the highest index set.</p>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;two&#39;</span>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;four&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">value</span><span class="o">|</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="n">value</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="cm">=begin</span>
+</span><span class='line'><span class="cm">lang@virtualbox1:~/arrays$ ruby array.rb</span>
+</span><span class='line'><span class="cm">nil</span>
+</span><span class='line'><span class="cm">nil</span>
+</span><span class='line'><span class="cm">two</span>
+</span><span class='line'><span class="cm">nil</span>
+</span><span class='line'><span class="cm">four</span>
+</span><span class='line'><span class="cm">=end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>This leads to another difference&#8230;</p>
+
+
+<h3>Referencing an array index that hasn&#39;t been set is an error in PHP, but not in Ruby.</h3>
+
+<p>The following code produces a PHP notice. Notices are a low severity error, and are usually turned off on production servers. However it is considered good practice to develop with notices turned on.</p>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="cp">&lt;?php</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;two&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$a</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;four&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">print</span> <span class="nv">$a</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">lang@virtualbox1:~/arrays$ php array.php</span>
+</span><span class='line'><span class="cm">PHP Notice: Undefined offset: 5 in /home/lang/arrays/array.php on line 6</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'><span class="cp">?&gt;</span><span class="x"></span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Ruby on the other hand does not consider this an error. It will return the nil value which is &#39;kind of&#39; like PHPs null.</p>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;two&#39;</span>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;four&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">puts</span> <span class="n">a</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span>
+</span><span class='line'><span class="cm">=begin</span>
+</span><span class='line'><span class="cm">lang@virtualbox1:~/arrays$ ruby array3.rb</span>
+</span><span class='line'><span class="cm">nil</span>
+</span><span class='line'><span class="cm">=end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>So what are your experiences switching between PHP and Ruby. Let me know in the comments below.</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/7-habits-of-highly-ineffective-people.html">7 Habits of Highly Ineffective People</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-06T00:00:00+10:00" pubdate data-updated="true">Jan 6<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img class="right" src="/images/posts/The_7_Habits_of_Highly_Effective_People.jpg" title="The 7 Habits of Highly Effective People Cover" ></p>
+
+<p>
+My Secret Santa decided to treat me to a copy of Stephen Covey&#8217;s <a href="http://en.wikipedia.org/wiki/The_Seven_Habits_of_Highly_Effective_People">The Seven Habits of Highly Effective People</a>. Presumably because I&#8217;m ineffective in some way, which is completely true. Here then is my list of how to be a highly ineffective person.</p>
+
+
+<ol>
+    <li><strong>Social Networking.</strong> Check Twitter/Facebook every 5 minutes. Someone might upload a photo of you at any minute. You must know ASAP.</li>
+    <li><strong>MSN.</strong> Having personal conversations on MSN can sap anything from 10 minutes up to an hour or two from your day.</li>
+    <li><strong>Hangovers.</strong> Nothing keeps you alert like having a late night the night before. Especially if you are a &quot;2 pint screamer&quot; like myself.</li>
+    <li><strong>Wikiwalk.</strong> Do a Google search on how to open a file in ruby. An hour later your reading about the Boer War in South Africa. You have no idea how this happened.</li>
+    <li><strong>News feeds.</strong> Keeping up with the world and what is happening in your industry is important. Reading every article from the 200 feeds you are subscribed too isn&#8217;t.</li>
+    <li><strong>Coffee Time.</strong> Making a cup of tea/coffee is a great little stretch for you. To really be ineffective, make a cup for the rest of the office as well.</li>
+    <li><strong>Unread books</strong>. Buying books and not reading them is a surefire way to feel smart. I currently have The Passionate Programmer, Linchpin and the 7 habits book waiting to be read/finished.</li>
+</ol>
+
+
+<p>Is there anything missing. Do you have a favourite time waster? Let everyone know with a comment.</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/the-best-feature-of-vim-not-in-ides.html">The Best Feature of VIM Not in IDE&#8217;s</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-11T00:00:00+10:00" pubdate data-updated="true">Oct 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>Insertion mode keyword completion</h3>
+
+<p>Ctrl-P and Ctrl-N in insert mode to search through the text to try and complete whatever variable name you are typing. I&#8217;ve never seen this in any other IDE and I really miss it. Code completion in IDE&#8217;s just isn&#8217;t the same.</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/speak-the-truth.html">Speak the Truth</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-06T00:00:00+10:00" pubdate data-updated="true">Sep 6<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Improper uses of Booleans causes headaches for people who are reviewing your code. Lets take a look at some good, and not so good uses.</p>
+
+<h3>Don&#8217;t be negative</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">if $notLoggedIn then</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Looks simple and readable right? Wrong. It&#39;s one step away from being misused.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">if ! $notLoggedin then</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Not not logged in. Double negatives are a gotcha in language and coding and should be avoided. Fortunately the solution is an easy one. Remove the negative prefix (such as not, doNot, dont) from the variable name.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">if $loggedIn then</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">if ! $loggedIn then</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Hide Literals</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">if $hidden == false then</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Is it really necessary to compare the variable to false? Imagine this conversation.</p>
+
+<pre><code>You are at Subway and they ask you
+'Would you like your sandwich toasted?'
+Would you reply with
+'Toasted equals false'
+    Or
+'Not Toasted'
+</code></pre>
+
+<p>Avoid comparing with a literal true or false. The correct way to express this is :-</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">if ! $hidden then</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>A Boolean Flag?</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">if $reportFlag then</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>$reportFlag is a little vague. In this case it is determining if an object is included in a report. So if $reportFlag is true, does that mean that the object is included or excluded? If you have to ask yourself the question then you have already failed and need to rethink what this variable should be called.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">if $report then</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is okay as long we are using the word &#8216;report&#8217; as a verb. &#8216;If we report this then&#8217; is how you would read this. Some people may not be able to make that leap so if you want to be more precise you could make it :-</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">if $includeInReport then</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Summary</h3>
+
+<p>So to sum up, these three things will go a long way to making your code readable.</p>
+
+<ul>
+    <li>Remove the negative prefix (such as not, doNot, dont) from variable names.</li>
+    <li>Avoid comparing with a literal true or false.</li>
+    <li>Avoid vague terms like flag for Boolean values.</li>
+</ul>
+
+
+<p>Consider these ideas when choosing</p>
+
+<ul>
+    <li>Variable names</li>
+    <li>Object properties</li>
+    <li>Database field names</li>
+    <li>Method or function parameter names</li>
+</ul>
+
+
+<h3>Anything Else?</h3>
+
+<p>Is there something i&#8217;ve missed? A hole you could drive a double-decker bus through? Leave a comment below.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/ctrl-a-delete.html">Ctrl-A Delete</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-08-04T00:00:00+10:00" pubdate data-updated="true">Aug 4<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Usually a last resort. Often the best thing to do.</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
+    
+      <a class="prev" href="/page/2/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -77,12 +1174,74 @@
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
+      <li class="post">
+        <a href="/articles/what-i-learned-about-ie7-text-shadow-and-opacity.html">What I learned about IE7 text-shadows and opacity</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/css-margin-and-padding-shorthand.html">Css margin and padding shorthand</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/how-rails-nginx-x-accel-redirect-work-together.html">How Rails, Nginx and X-Accel-Redirect work together</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/adding-headers-to-requests-using-nginx-and-passenger.html">Adding headers to requests using Nginx and Passenger</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/differences-between-php-arrays-and-ruby-hashes.html">Differences between PHP Arrays and Ruby Hashes</a>
+      </li>
+    
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/langsharpe">@langsharpe</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'langsharpe',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
 
 
-
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("LangSharpe", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/LangSharpe" class="twitter-follow-button" data-show-count="false">Follow @LangSharpe</a>
+  
+</section>
 
 
   
@@ -98,9 +1257,30 @@
 </footer>
   
 
+<script type="text/javascript">
+      var disqus_shortname = 'thedataasylum';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
 
 
 

@@ -1,0 +1,785 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>The Data Asylum</title>
+  <meta name="author" content="Lang Sharpe">
+
+  
+  <meta name="description" content="Switching jobs and making a career change is a big challenge. New problem domains to learn, new working relationships to build, new brand of instant &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://thedataasylum.com/page/2/index.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/thedataasylum/atom.xml" rel="alternate" title="The Data Asylum" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">The Data Asylum</a></h1>
+  
+    <h2>Programming, Databases and People</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/thedataasylum/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:thedataasylum.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/switching-from-web-to-desktop-application-development.html">Switching From Web to Desktop Application Development</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-07-26T00:00:00+10:00" pubdate data-updated="true">Jul 26<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Switching jobs and making a career change is a big challenge. New problem domains to learn, new working relationships to build, new brand of instant coffee to get used to. For a programmer one of the more interesting changes can be moving from working on web applications to desktop applications. Here are a few points that i&#39;ve picked up having made the plunge a few months ago.</p>
+
+
+<ul>
+<li><p><strong>Control of environment</strong>. As a web programmer you have a lot of control of the environment your application runs in. Browser issues aside, once a HTTP request hits your servers you have complete control over what happens next. A desktop application has little control over where it is being run, what software is installed with it etc.</p></li>
+<li><p><strong>Managing performance</strong>. A desktop application performing poorly can be a nightmare to diagnose. The characteristics of the users machine and currently running processes are completly foreign. If your web app is running slowly you not only have the program available but intimate knowledge of the hardware and architecture it is running on. You can make tradeoffs on the servers that your users may not be willing to do for your desktop application.</p></li>
+<li><p><strong>24/7 operations</strong>. Most web developers will not only have to create the application, but support it as well. These problems that occur on live systems are usually given high priority pushing more long term work to the back.</p></li>
+</ul>
+
+
+<p>I had no idea how narrow my knowledge was. I&#39;d be interested to hear your thoughts. Have you made the switch from web to desktop, or in the other direction?</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/creating-a-static-class-variable-in-ruby.html">Creating a Static Class Variable in Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-06-08T00:00:00+10:00" pubdate data-updated="true">Jun 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>One of the patterns I (over)use in php is having a class with only static variables and static functions. To do this in ruby isn&#8217;t as straight forward as it could be, so here is how to do it.</p>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">StaticKlass</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1"># ruby class variables are prefixed with &#39;@@&#39; .</span>
+</span><span class='line'>    <span class="vc">@@variable</span> <span class="o">=</span> <span class="kp">nil</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1"># If you want to provide getters and setters you cant use the attr_accessor</span>
+</span><span class='line'>    <span class="c1"># keyword, you have to create them manually. By adding the class name to</span>
+</span><span class='line'>    <span class="c1"># the method definition, we are indicating that this is a method on the</span>
+</span><span class='line'>    <span class="c1"># class, not in instances of this class</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nc">StaticKlass</span><span class="o">.</span><span class="nf">variable</span><span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span class='line'>        <span class="vc">@@variable</span> <span class="o">=</span> <span class="n">x</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1"># the getter is defined to return the class variable when called</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nc">StaticKlass</span><span class="o">.</span><span class="nf">variable</span>
+</span><span class='line'>        <span class="k">return</span> <span class="vc">@@variable</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/my-widescreen-desktop.html">My Widescreen Desktop</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-06-01T00:00:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is how I organize my widescreen desktop.</p>
+
+
+<p><img src="/images/posts/mydesktop-300x168.png" alt="My Desktop, with the taskbar on the left hand side." /></p>
+
+<p>The main feature is moving the taskbar over to the left hand side. When editing code or reading a website I would rather have more space vertically. It is also easier to select a window when you have a lot open. The Quick Launch toolbar is more useful, because you can have a lot more shortcuts without taking away taskbar space.</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/wtf-scheduled-reports.html">WTF - Scheduled Reports</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-05-25T00:00:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Working on scheduled reporting systems, you expect to see the same concepts. What format wiil we send the report in? How will it be delivered? I opened the &ldquo;scheduled report&rdquo; table to see how this particular system had been implemented. I couldn&rsquo;t immediately find which column i was looking for. In fact the only one that looked like it might be useful was something called deliv_method.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>deliv_method
+</span><span class='line'>	206
+</span><span class='line'>	774
+</span><span class='line'>	206
+</span><span class='line'>	206</span></code></pre></td></tr></table></div></figure>
+
+<p>Ok, so we&rsquo;ve got a numeric list of delivery methods. Nothing too unusual about that. I just need to find the list either in the database or codebase. But where do we store the format of the report? I worked my way through the report scheduler code until i found this.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">$delivMeth = ($row[&#39;DELIV_METHOD&#39;] &gt;&gt; 8);</span>
+</span><span class='line'><span class="x">$myFormat = ($row[&#39;DELIV_METHOD&#39;] &amp; 0xFF);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+<p>Are those <a href="http://php.net/manual/en/language.operators.bitwise.php" target="_blank">bitwise operators</a>? And even a literal hexadecimal number? The only place i&rsquo;ve ever seen a bitwise operator is when setting the error reporting level. I&rsquo;ve looked at this a few times and am still not sure i correctly understand it.</p>
+<p>The answer eventually revealed itself.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">$a = array(</span>
+</span><span class='line'><span class="x">	0x0104 =&gt; &#39;Email HTML&#39;,</span>
+</span><span class='line'><span class="x">	0x0204 =&gt; &#39;Email HTML Attachment&#39;,</span>
+</span><span class='line'><span class="x">	0x0284 =&gt; &#39;Email HTML Zipped attach&#39;,</span>
+</span><span class='line'><span class="x">	0x0201 =&gt; &#39;Email PDF&#39;,</span>
+</span><span class='line'><span class="x">	0x0203 =&gt; &#39;Email TSV delim&#39;,</span>
+</span><span class='line'><span class="x">	0x0283 =&gt; &#39;Email TSV delim zipped&#39;,</span>
+</span><span class='line'><span class="x">	0x0203 =&gt; &#39;Email CSV delim&#39;,</span>
+</span><span class='line'><span class="x">	0x0283 =&gt; &#39;Email CSV delim zipped&#39;,</span>
+</span><span class='line'><span class="x">	0x0304 =&gt; &#39;FTP HTML&#39;,</span>
+</span><span class='line'><span class="x">	0x0301 =&gt; &#39;FTP PDF&#39;,</span>
+</span><span class='line'><span class="x">	0x0303 =&gt; &#39;FTP TSV delim&#39;,</span>
+</span><span class='line'><span class="x">	0x0303 =&gt; &#39;FTP CSV delim&#39;,</span>
+</span><span class='line'><span class="x">	);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+<p>Pretty clever you have to admit! Unfortunately it can lead to same rather ugly code.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">if ((($(&#39;#INPUT\\[DELIVERY_METHOD\\]&#39;).val() &amp; 0xFF00) &gt;&gt; 8) != 0x03){</span>
+</span></code></pre></td></tr></table></div></figure>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/why-hire-a-senior-php-programmer.html">Why Hire a Senior PHP Programmer?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-05-17T00:00:00+10:00" pubdate data-updated="true">May 17<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>One of the first questions I ask when attending an interview is why are you hiring a senior PHP programmer? It is a question born out of cynicism. If everything is going well in your organization why change things by hiring someone? But also the question is &#39;Why do you need someone with lots of experience&#39;. They are going to be more expensive so why are you spending the money?</p>
+<p>In <a href="http://www.amazon.com/Smart-Gets-Things-Done-Technical/dp/1590598385/" target="_blank">Joel Spolsky&#39;s book</a> on hiring programmers, he states :-</p>
+<blockquote>
+	<p>The great software developers, indeed, the best in every field, are quite simply never on the market.</p>
+</blockquote>
+<p>Sitting on the other side of the fence, I believe that the opposite is also true. The great software <strong>jobs</strong> are quite simply never on the market. There are many reasons to hire a senior programmer. Let us have a realistic look at them from the point of view of the jobseeker.</p>
+<ul>
+	<li>
+		<div>The business is growing and we have more paid projects then the current staff can handle.</div>
+		<ul>
+			<li>This is the most common answer, and sometimes it&#39;s not rubbish. It&#39;s one of the better answers but the problem for the jobseeker is there is no real way to disprove it. Also you have to ask why do you need more than a mid-level or even low level programmer.</li>
+		</ul>
+	</li>
+	<li>
+		<div>Our senior programmer quit, and we are filling in his position</div>
+		<ul>
+			<li>Why did he quit? Is he moving cities to look after his sick aunt? Or did he just quit because he didn&#39;t like the job? It is once again hard for the jobseeker to verify this. Even if they gave you permission to speak to the ex-employee, would you believe it if he told you it was the greatest job on earth? Perhaps asking how long his tenure was may offer an insight.</li>
+		</ul>
+	</li>
+	<li>
+		<div>We only hire experienced people</div>
+		<ul>
+			<li>If everyone is senior who makes decisions? Who does the boring crap? (Seriously there are often a lot of repetitive tasks that are perfect for a junior to cut his teeth on, and would drive a senior person insane with boredom). Who am I going to mentor?</li>
+		</ul>
+	</li>
+	<li>
+		<div>Our platform is a complete mess and we need senior people to decipher it</div>
+		<ul>
+			<li>While this is a cynical view I believe that there are quite a few positions where a senior position is required because of this very reason. It will not be stated explicitly or even understood by the people hiring, and can be a real surprise for employees walking in to a new position. Trying to tell if this is the case before hand is tricky. The sad thing is that this type of challenge could be attractive to a senior person. Give a technical person the opportunity to make something better and they (should) grab it with both hands.</li>
+		</ul>
+	</li>
+</ul>
+<p>What are the other reasons to hire a senior programmer? Get it off your chest and leave a comment!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/help-eliminate-bad-code.html">Help Eliminate Bad Code</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-27T00:00:00+10:00" pubdate data-updated="true">Jan 27<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <a href="http://codeoffsets.com/">Bad Code Offsets</a> project is an attempt to get programmers to put money into open source software. We may not be able to change the bad code we have written. Instead we can buy an offset that goes towards creating more good code.</p>
+<blockquote>
+	<p>Bad code lives on well past the time we inflicted those bad lines into the global code base. Applications continue to live their lives serving businesses, consumers and the global community at large. Bad code weakens the utility delivered by these applications causing business loss, user dissatisfaction, accidents, disasters and, in general, sucks limited resources towards responding to the after effects of bad code rather than toward the common good.</p>
+</blockquote>
+<p>They have <a href="http://thedailywtf.com/Articles/Bad-Code-Offsets-Open-Web-Innovation.aspx">just made a $500 grant</a> to the GPSd project, which aims to shield developers from the <a href="http://esr.ibiblio.org/?p=801">idiosyncracies</a> of integrating each GPS device available.</p>
+<p>How often do you use open source software. How often have you contributed, either by submitting code or donating money? My gut feeling is that at least 95% of developers haven&#39;t done either. The 10 USD I donated will be going to the Apache software foundation. The apache webserver has been at the base of nearly every project I&#39;ve worked on and will be for a long time to come.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/2-points-to-remember-when-interviewing-developers.html">2 Points to Remember When Interviewing Developers</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-20T00:00:00+10:00" pubdate data-updated="true">Jan 20<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+	<li><strong>Sell your company</strong>. Tell a story. Where you have come from and where you are going. Why the position is so important to continuing that story. What technical challenges are the company facing. Keep it interesting and relevant to the position. You want everyone who comes for an interview to want to work for you. Even if the person is not right for the job, word of mouth amongst potential employees is a great tool for getting people through the door.</li>
+	<li><strong>Qualify the applicant</strong>. Ask hard questions and let them prove their knowledge. Most of the enjoyment you can receive from a job is through co-workers. One of the concerns a job seekers will have is the quality of their future co-workers. By showing that you are screening out lazy, boring and unqualified people, the person will feel more comfortable about taking the job. Instead of wondering if the company will be good enough for them, they will start to wonder if they are good enough for the company. It also puts a level of expectation on the applicant which is a good place to start the work relationship.</li>
+</ul>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/grepwin-grep-for-windows.html">grepWin - Grep for Windows</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-06T00:00:00+10:00" pubdate data-updated="true">Jan 6<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+	<a href="http://www.gnu.org/software/grep/">grep</a> is an often used tool on linux. It&#8217;s job is very simple, to find a string (or regular expression) in a group of files.</p>
+<p>
+	<a href="http://tools.tortoisesvn.net/grepWin">grepWin</a> is a gui version and is a lifesaver if you have to use windows as part of your development environment. The best bits are</p>
+<ul>
+	<li>
+		Integrates with windows explorer. Search any folder by right clicking on it.</li>
+	<li>
+		Results behave just like a windows explorer folder. Right click on the files to edit from the results panel.</li>
+	<li>
+		Regular expression support. A feature compared to windows built in search.</li>
+	<li>
+		Search and replace. The tool goes further than grep and will do a search and replace over many files.</li>
+</ul>
+
+<img src="/images/posts/grepwin-scaled.png" alt="grepWin Screenshot" />
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/how-to-be-a-programmer-circa-2002.html">How to Be a Programmer - Circa 2002</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-30T00:00:00+10:00" pubdate data-updated="true">Dec 30<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>While looking through some old files I found this gem. It&#39;s an essay written seven years ago by Robert L. Read called <a href="http://samizdat.mines.edu/howto/">&quot;How To Be a Programmer: A Short, Comprehensive, and Personal Summary&quot;</a>. It covers a what the writer feels are the most important skills to learn across beginner, intermediate and advanced skill levels.</p>
+
+
+<p>I remember being heavily influenced by this as it appeared a short time after I first had a real job. seven years is a long time in technology and I was wondering if the advice in it held up. Here are a few excerpts.</p>
+
+
+<blockquote><p>2.9 How to Deal with Intermittent Bugs
+The intermittent bug has to obey the same laws of logic everything else does. What makes it hard is that it occurs only under unknown conditions. Try to record the circumstances under which it does occur, so that you can guess at what the variability really is. &#8230; Try, try, try to reproduce it. If you can&#39;t reproduce it, set a trap for it by building a logging system, a special one if you have to, that can log what you guess is what you need when it really occurs.</p></blockquote>
+
+<p>When I first read this many years ago I was relieved. It&#39;s not just me that has these problems. I&#39;ve used this formula too many times to count.</p>
+
+
+<blockquote><p>6.7 How to Know When to Apply Fancy Computer Science
+There is a body of knowledge about algorithms, data structures, mathematics, and other gee-whiz stuff that most programmers know about but rarely use. In practice, this wonderful stuff is too complicated and generally unnecessary.</p></blockquote>
+
+<p>It&#39;s the biggest contradiction in our industry that a lot of importance is placed on solutions to complicated problems when most of the time simple solutions to simple problems are needed (and more desirable).</p>
+
+
+<blockquote><p>4.1 How to Stay Motivated
+It is a wonderful and surprising fact that programmers are highly motivated by the desire to create artifacts that are beautiful, useful, or nifty. &#8230; There&#39;s a lot of money to be made doing ugly, stupid, and boring stuff; but in the end fun will make the most money for the company.</p></blockquote>
+
+<p>I&#39;m not sure where I stand on this one. As much as I&#39;d like to believe that fun is always the way to go I&#39;m not sure that it will always pay the bills.</p>
+
+
+<p>Overall it is still a relevant and important essay for any programmer at any level.</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/articles/glue-code.html">Glue Code</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-23T00:00:00+10:00" pubdate data-updated="true">Dec 23<span>rd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Glue is what holds your application together. Code needs to talk to databases, Javascript is calling your PHP functions using Ajax. When two systems, or different parts of the same system need to talk to each other, you end up with glue. It (hopefully) doesn&#8217;t have any business logic. It&#8217;s used or copied by at least a few different parts of your system, perhaps even in different projects in the same organisation.</p>
+
+<p>Glue code holds things together. The only problem is that glue is not your application. Unless you&#39;re developing a <a href="http://framework.zend.com/">framework</a>, <a href="http://www.ubuntu.com/">operating system</a> or perhaps something that needs <a href="https://addons.mozilla.org/">plugins</a>, glue is not your strength. There are always exceptions but if you are writing glue, especially the same glue for the 3rd or 4th time, then you&#39;re not directly working on the application you are building.</p>
+
+<p>Having said that, your project won&#39;t survive without glue. So how do you keep everything together?</p>
+
+<ul>
+    <li><strong>Recognise glue</strong>. The first step is to understand that you are now writing glue code and not working on business requirements. For example, say you are writing a script to process files that are uploaded to your server. Discovering the files is glue, the processing of then is specific to your application.</li>
+    <li><strong>Standardise across your organisation</strong>. Glue may start out as a one off but as time moves on it will become apparent which pieces are worth time improving and which aren&#39;t.</li>
+    <li><strong>Make it as simple to use as possible</strong>. It will need to be understood by a larger group of developers than your other code. Put that extra time into documentation and code beautification.</li>
+    <li><strong>Make it as robust as possible</strong>. You don&#39;t want this getting in the way of your &#39;actual&#39; work.</li>
+    <li><strong>Use 3rd party glue</strong>. Someone has nearly always been before you. Wiring your PHP and JS together with AJAX? It&#39;s <a href="http://www.modernmethod.com/sajax/">been</a> <a href="http://phplivex.com/">done</a>. Creating a DB access class? <a href="http://framework.zend.com/manual/en/zend.db.table.html">Been</a> there, <a href="http://www.phpactiverecord.org/">done</a> <a href="http://propel.phpdb.org/">that</a>. If you think you can do better your probably wrong. You may write better code, but you probably won&#39;t document or test it as thoroughly as an open source project has already been.</li>
+</ul>
+
+
+<p>In conclusion, you want to keep glue simple and straight forward. Recognise what is and isn&#39;t glue in your application. Share the glue you have with every one in your team, and if your brave, the outside world.</p>
+
+
+<p><em>The idea of <a href="http://www.faqs.org/docs/artu/ch04s03.html">glue</a> is described in Eric Raymond&#39;s excellent book <a href="http://www.faqs.org/docs/artu/">The art of unix programming</a>.</em></p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/page/3/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/articles/what-i-learned-about-ie7-text-shadow-and-opacity.html">What I learned about IE7 text-shadows and opacity</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/css-margin-and-padding-shorthand.html">Css margin and padding shorthand</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/how-rails-nginx-x-accel-redirect-work-together.html">How Rails, Nginx and X-Accel-Redirect work together</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/adding-headers-to-requests-using-nginx-and-passenger.html">Adding headers to requests using Nginx and Passenger</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/differences-between-php-arrays-and-ruby-hashes.html">Differences between PHP Arrays and Ruby Hashes</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/langsharpe">@langsharpe</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'langsharpe',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("LangSharpe", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/LangSharpe" class="twitter-follow-button" data-show-count="false">Follow @LangSharpe</a>
+  
+</section>
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Lang Sharpe -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'thedataasylum';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
